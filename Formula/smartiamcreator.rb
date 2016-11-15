@@ -26,6 +26,7 @@ class Smartiamcreator < Formula
       system python, *args
     end
     puts "This is the start of the install"
+    puts Dir.pwd
     puts Dir.glob("formula-smartiamcreator/")
     bin.install "formula-smartiamcreator/create_iam_accounts.py"
     mv "#{bin}/formula-smartiamcreator/create_iam_accounts.py", "#{bin}/create_iam_accounts"
