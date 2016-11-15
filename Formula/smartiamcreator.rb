@@ -28,7 +28,7 @@ class Smartiamcreator < Formula
     puts "This is the start of the install"
     puts Dir.pwd
     basedir = '.'
-    puts Dir.glob("formula-smartiamcreator/")
+    puts Dir.glob("formula-smartiamcreator/*.py")
     bin.install "formula-smartiamcreator/create_iam_accounts.py"
     mv "#{bin}/formula-smartiamcreator/create_iam_accounts.py", "#{bin}/create_iam_accounts"
     puts "This is the end of the install"
