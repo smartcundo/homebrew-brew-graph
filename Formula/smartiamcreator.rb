@@ -1,6 +1,6 @@
 require 'formula'
 
-class smartiamcreator < Formula
+class Smartiamcreator < Formula
   homepage 'https://github.com/smartcundo/smartiamcreator'
   url 'https://github.com/smartcundo/homebrew-smartiamcreator.git'
   version '0.0.1'
@@ -12,3 +12,4 @@ class smartiamcreator < Formula
     EOS
   end
 end
+
