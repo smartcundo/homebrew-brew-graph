@@ -9,9 +9,6 @@ class Smartiamcreator < Formula
     Language::Python.each_python(build) do |python, version|
       ENV.prepend_create_path "PATH", buildpath/"vendor/bin"
       ENV.prepend_create_path "PYTHONPATH", buildpath/"vendor/lib/python#{version}/site-packages"
-      resource("cython").stage do
-        system python, *Language::Python.setup_install_args(buildpath/"vendor")
-      end
 
       bundle_path = libexec/"lib/python#{version}/site-packages"
       ENV.prepend_create_path "PYTHONPATH", bundle_path
@@ -28,6 +25,8 @@ class Smartiamcreator < Formula
       ENV.prepend_create_path "PYTHONPATH", lib/"python#{version}/site-packages"
       system python, *args
     end
+    bin.install "formula-smartiamcreator/create_iam_accounts.py"
+    mv "#{bin}/formula-smartiamcreator/create_iam_accounts.py", "#{bin}/create_iam_accounts"
   end
 end
 
