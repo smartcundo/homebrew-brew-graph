@@ -1,6 +1,6 @@
 require 'formula'
 
-class BrewDesc < Formula
+class smartiamcreator < Formula
   homepage 'https://github.com/smartcundo/smartiamcreator'
   url 'https://github.com/smartcundo/homebrew-smartiamcreator.git'
   version '0.0.1'
