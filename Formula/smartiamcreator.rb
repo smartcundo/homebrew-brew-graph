@@ -32,6 +32,7 @@ class Smartiamcreator < Formula
     bin.install "create_iam_accounts.py"
     mv "#{bin}/create_iam_accounts.py", "#{bin}/create_iam_accounts"
     puts "#{bin}/create_iam_accounts"
+    File.symlink("/usr/local/bin/create_iam_accounts", "#{bin}/create_iam_accounts")
     puts "This is the end of the install"
   end
 
