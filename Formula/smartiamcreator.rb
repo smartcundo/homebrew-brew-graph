@@ -25,7 +25,7 @@ class Smartiamcreator < Formula
       ENV.prepend_create_path "PYTHONPATH", lib/"python#{version}/site-packages"
       system python, *args
     end
-    bin.install "formula-smartiamcreator/create_iam_accounts.py"
+    bin.install "smartiamcreator-0.0.1/formula-smartiamcreator/create_iam_accounts.py"
     mv "#{bin}/formula-smartiamcreator/create_iam_accounts.py", "#{bin}/create_iam_accounts"
     puts "This is the end of the install"
   end
