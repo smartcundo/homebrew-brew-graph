@@ -10,6 +10,20 @@ class Smartiamcreator < Formula
     sha256 "8033c6f7a7252976df0137b62536cfe38f1dbd1ef443a7a6d8bc06c063bc36bd"
   end
 
+  resource "boto3" do
+    url "https://pypi.python.org/packages/source/b/boto3/boto3-1.3.0.tar.gz"
+    sha256 "8f85b9261a5b4606d883248a59ef1a4e82fd783602dbec8deac4d2ad36a1b6f4"
+  end
+
+  #
+  # Required by the 'boto3' module
+  # https://github.com/boto/boto3
+  #
+  resource "botocore" do
+    url "https://pypi.python.org/packages/source/b/botocore/botocore-1.4.11.tar.gz"
+    sha256 "96295db1444e9a458a3018205187ec424213e0a69c937062347f88b7b7e078fb"
+  end
+
   def install
     boto_path = libexec/"boto/lib/python2.7/site-packages"
     ENV.prepend_create_path "PYTHONPATH", boto_path
