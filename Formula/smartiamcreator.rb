@@ -25,13 +25,11 @@ class Smartiamcreator < Formula
   end
 
   def install
-    boto_path = libexec/"boto/lib/python2.7/site-packages"
-    ENV.prepend_create_path "PYTHONPATH", boto_path
-    resource("boto").stage do
-      system "python", *Language::Python.setup_install_args(libexec/"boto")
+    resources.each do |r|
+      r.stage do
+        system "python", *Language::Python.setup_install_args(libexec/"vendor")
+      end
     end
-    (lib/"python2.7/site-packages").mkpath
-    (lib/"python2.7/site-packages/homebrew-smart-boto.pth").write "#{boto_path}\n"
 
     Language::Python.each_python(build) do |python, version|
       ENV.prepend_create_path "PATH", buildpath/"vendor/bin"
