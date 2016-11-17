@@ -40,6 +40,7 @@ class Smartiamcreator < Formula
 
       bundle_path = libexec/"lib/python#{version}/site-packages"
       ENV.prepend_create_path "PYTHONPATH", bundle_path
+      system "python", *Language::Python.setup_install_args(libexec)
       resource("six").stage do
         system python, *Language::Python.setup_install_args(libexec)
       end
