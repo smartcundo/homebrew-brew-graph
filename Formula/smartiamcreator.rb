@@ -25,6 +25,9 @@ class Smartiamcreator < Formula
   end
 
   def install
+    vendor_site_packages = libexec/"vendor/lib/python2.7/site-packages"
+    ENV.prepend_create_path "PYTHONPATH", vendor_site_packages
+
     resources.each do |r|
       r.stage do
         system "python", *Language::Python.setup_install_args(libexec/"vendor")
