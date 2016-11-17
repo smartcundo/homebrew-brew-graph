@@ -53,6 +53,8 @@ class Smartiamcreator < Formula
       ENV.prepend_create_path "PYTHONPATH", lib/"python#{version}/site-packages"
       system python, *args
     end
+    bin.install Dir["#{libexec}/bin/*"]
+    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
     puts "This is the start of the install"
     puts Dir.pwd
     basedir = '.'
@@ -62,6 +64,7 @@ class Smartiamcreator < Formula
     puts "#{bin}/create_iam_accounts"
     File.symlink("#{bin}/create_iam_accounts","/usr/local/bin/create_iam_accounts")
     puts "This is the end of the install"
+    
   end
 
 end
