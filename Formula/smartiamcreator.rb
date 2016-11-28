@@ -44,7 +44,7 @@ class Smartiamcreator < Formula
 
   resource "bcdoc" do
     url "https://pypi.python.org/packages/source/b/bcdoc/bcdoc-0.12.2.tar.gz"
-    sha1 "31b2a714c2803658d9d028c8edf4623fd0daaf18"
+    sha256 "96f83b0ab784e1e003111ff14927e4857df42aa169acccabd357ae84ec800897"
   end
 
   def install
