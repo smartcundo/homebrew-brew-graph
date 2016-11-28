@@ -42,6 +42,10 @@ class Smartiamcreator < Formula
     sha256 "8f85b9261a5b4606d883248a59ef1a4e82fd783602dbec8deac4d2ad36a1b6f4"
   end
 
+  resource "bcdoc" do
+    url "https://pypi.python.org/packages/source/b/bcdoc/bcdoc-0.12.2.tar.gz"
+    sha1 "31b2a714c2803658d9d028c8edf4623fd0daaf18"
+  end
 
   def install
     vendor_site_packages = libexec+"lib/python2.7/site-packages"
@@ -55,10 +59,10 @@ class Smartiamcreator < Formula
 
     resource("botocore").stage { system "python", *install_args }
     resource("bcdoc").stage { system "python", *install_args }
-    resource("six").stage { system "python", *install_args }
-    resource("colorama").stage { system "python", *install_args }
-    resource("docutils").stage { system "python", *install_args }
-    resource("rsa").stage { system "python", *install_args }
+    # resource("six").stage { system "python", *install_args }
+    # resource("colorama").stage { system "python", *install_args }
+    # resource("docutils").stage { system "python", *install_args }
+    # resource("rsa").stage { system "python", *install_args }
 
     bin.env_script_all_files(libexec+"bin", :PYTHONPATH => ENV["PYTHONPATH"])
 
