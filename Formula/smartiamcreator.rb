@@ -2,8 +2,8 @@ require 'formula'
 
 class Smartiamcreator < Formula
   homepage 'https://github.com/smartcundo/smartiamcreator'
-  url 'https://github.com/smartcundo/smartiamcreator/archive/v0.0.3.tar.gz'
-  sha256 '3c130d6791d27e3050a03d7819883a840a4cdc2e43cc5c711eae9381a97b237f'
+  url 'https://github.com/smartcundo/smartiamcreator/archive/v0.0.4.tar.gz'
+  sha256 '322a6387177837fc3184deeef23f77a5952edfd93553d5dd5f04f699aeb225ab'
 
   head do
     url "https://github.com/aws/aws-cli.git", :branch => :develop
