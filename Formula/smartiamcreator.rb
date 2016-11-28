@@ -58,7 +58,7 @@ class Smartiamcreator < Formula
     end
 
     resource("botocore").stage { system "python", *install_args }
-    resource("bcdoc").stage { system "python", *install_args }
+    # resource("bcdoc").stage { system "python", *install_args }
     # resource("six").stage { system "python", *install_args }
     # resource("colorama").stage { system "python", *install_args }
     # resource("docutils").stage { system "python", *install_args }
